@@ -5,6 +5,7 @@
 }
 
 body{
+    margin: 0px 325px 0px 325px;
     display: grid;
     height: 100vh;
     font-family: 'Manrope', sans-serif;
@@ -29,38 +30,123 @@ header{
     text-decoration: underline;
 }
 
-.gallery-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2vw;
-    padding: 0 1vw;
-}
-
-.gallery-items{
-    width: 340px;
-    height: 250px;
-    flex-grow: 1;
-}
-
-.gallery-items img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 main{
     display: grid;
-    background-color: white
+    grid-template-rows: 2fr 1fr;
+    gap: 7px;
+}
+
+.principal{
+    display: grid;
+    grid-template-areas:
+    "principal secundaria"
+    "principal secundaria";
+    gap: 7px;
+}
+
+.imagem__principal{
+    grid-area: principal;
+    background-image: url(./img/b99-poster3.jpg);
+    background-size: cover;
+    display: grid;
+    place-items: end start;
+}
+
+.imagens__secundarias{
+    display: grid;
+    grid-area: secundaria;
+    grid-template-areas:
+    "img1 img2"
+    "img3 img4";
+    gap: 7px;
+}
+
+.img1{
+    grid-area: img1;
+    background-image: url(./img/florida2.jpg);
+    background-size: cover;
+}
+
+.img2{
+    grid-area: img2;
+    background-image: url(./img/gina.jfif);
+    background-size: cover;
+}
+
+.img3{
+    grid-area: img3;
+    background-image: url(./img/rosa-cabelo2.jpg);
+    background-size: cover;
+}
+
+.img4{
+    grid-area: img4;
+    background-image: url(./img/amy1.jpg);
+    background-size: cover;
+}
+
+.imagens__terciarias{
+    display: grid;
+    grid-template-areas:
+    "img5 img6 img7";
+    gap: 7px;
+}
+
+.img5{
+    grid-area: img5;
+    background-image: url(./img/wedding_peraltiago.jpg);
+    background-size: cover;
+}
+
+.img6{
+    grid-area: img6;
+    background-image: url(./img/halloween.webp);
+    background-size: cover;
+}
+
+.img7{
+    grid-area: img7;
+    background-image: url(./img/peraltiago_mac.jfif);
+    background-size: cover;
+}
+
+img[alt~=gallery-items]{
+    width: 100%;
+    height: 100%;
+}
+
+div[alt~=img]:hover{
+    transform: scale(1.2);
 }
 
 footer{
+    display: grid;
     align-items: center;
+    justify-content: center;
 }
 
-button{
-    color: white;
-    background-color: black;
-    border-radius: 15%;
+.botao{
+    font-size: 1.3em;
     align-items: center;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    display: grid;
+    align-content: center;
+    color: white;
+    justify-content: center;
 }
+
+.botao:hover{
+    transform: scale(1.1);
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.infos{
+    align-items: center;
+    background-color: rgb(16, 35, 51, 0.8);
+    width: 100%;
+}
+
