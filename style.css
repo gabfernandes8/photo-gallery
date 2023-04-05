@@ -62,6 +62,10 @@ main{
     gap: 7px;
 }
 
+.imagens__secundarias > div{
+    display: grid;
+}
+
 .img1{
     grid-area: img1;
     background-image: url(./img/florida2.jpg);
@@ -147,7 +151,7 @@ footer{
     transform: scale(1.1);
     background-color: #f1f1f1;
     color: black;
-    transition-duration: .2s;
+    transition-duration: .3s;
 }
 
 .infos{
