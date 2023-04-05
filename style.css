@@ -42,11 +42,12 @@ main{
     "principal secundaria"
     "principal secundaria";
     gap: 7px;
+    grid-template-columns: 7fr 6fr;
 }
 
 .imagem__principal{
     grid-area: principal;
-    background-image: url(./img/b99-poster3.jpg);
+    background-image: url(./img/b99-banner2.jpg);
     background-size: cover;
     display: grid;
     place-items: end start;
@@ -90,6 +91,10 @@ main{
     grid-template-areas:
     "img5 img6 img7";
     gap: 7px;
+}
+
+.imagens__terciarias > div{
+    display: grid;
 }
 
 .img5{
@@ -142,11 +147,34 @@ footer{
     transform: scale(1.1);
     background-color: #f1f1f1;
     color: black;
+    transition-duration: .2s;
 }
 
 .infos{
-    align-items: center;
     background-color: rgb(16, 35, 51, 0.8);
     width: 100%;
+    opacity: 0;
+    transition-duration: .2s;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
 
+.infos a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+div[alt~=img]:hover > .infos{
+    opacity: 1;
+}
+
+.infos a:hover{
+    text-decoration: underline;
+}
+
+div[alt~=img] > .infos{
+    place-self: end start;
+}
